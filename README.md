@@ -2,6 +2,9 @@
 
 Exercise for internship interview
 
+Installation:
+git clone https://github.com/DotnDev/nainsMines.git
+
 PHP, Symfony
 
 Functionalities:
