@@ -1,0 +1,49 @@
+{# This is my view, displaying a title and table #}
+
+{% extends ('base.html.twig')%}
+
+
+{% block title %}Données : nains et mines{% endblock %}
+
+{% block body %}
+  
+  {% if nains %}
+
+  <table class="table table-striped">
+  <thead>
+  <tr>
+  <th>id</th>
+  <th>nom</th>
+   <th>taille</th>
+    <th>mineId</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  {% for nain in nains%}
+
+
+  <tr>
+  <td> {{ nain.id }} </td>
+    <td> {{ nain.nom }} </td>
+  <td> {{ nain.taille }} </td>
+    <td> {{ nain.mineId }} </td>
+
+
+  </tr>
+
+
+  {% endfor %}
+
+
+  </tbody>
+  </table>
+  {% else %}
+
+  <p> No nains to display </p>
+  
+
+  
+
+  {% endif %} 
+{% endblock %}
