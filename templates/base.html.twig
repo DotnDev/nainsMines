@@ -1,15 +1,25 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-    	<div class ="container">
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </div>
-    </body>
-</html>
+	<!DOCTYPE html>
+	<html>
+	    <head>
+	        <meta charset="UTF-8">
+	        <title>{% block title %}Welcome!{% endblock %}</title>
+	        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+	        {% block stylesheets %}{% endblock %}
+	    </head>
+	    <body>
+	    	<div class ="container">
+	        {% block body %}{% endblock %}
+	        {% block javascripts %}
+
+	        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="{{ asset('js/javascript.js') }}"></script>
+
+
+	        {% endblock %}
+	        
+	    </div>
+	    </body>
+	</html>

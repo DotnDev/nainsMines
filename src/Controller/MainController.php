@@ -25,13 +25,10 @@ class MainController extends AbstractController
        
       $nains = $this -> getDoctrine()-> getRepository(Nain::class) -> FindAll();
       $mines = $this -> getDoctrine()-> getRepository(Mine::class) -> FindAll();
-        //$nains = ['Nain 1', 'Nain 2'];
 
-        return  $this -> render('nains/index.html.twig', array ('nains' => $nains));
+        return  $this -> render('nains/index.html.twig', array ('nains' => $nains, 'mines' => $mines));
 
-            //'nains' => $nains);
-
-            //
+    
 
     }
 
